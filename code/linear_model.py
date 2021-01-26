@@ -65,7 +65,7 @@ class logRegL0(logReg):
 
                 # this is a set, so list(selected_new) makes to list
                 selected_new = selected | {i} # tentatively add feature "i" to the selected set
-                # TODO for Q2.3: Fit the model with 'i' added to the features,
+                # Fit the model with 'i' added to the features,
                 # then compute the loss and update the minLoss/bestFeature
 
                 #first compute the score using minimize
@@ -103,7 +103,7 @@ class leastSquaresClassifier:
     def predict(self, X):
         return np.argmax(X@self.W.T, axis=1)
 
-################ Q3.2 #################
+
 class logLinearClassifier: 
     
     def __init__(self, maxEvals = 100, verbose = 0):
@@ -146,7 +146,7 @@ class logLinearClassifier:
     def predict(self, X):
         return np.argmax(X@self.W.T, axis=1)
 
-################ Q3.4 #################
+
 
 class softmaxClassifier:
     def __init__(self, maxEvals = 100, verbose = 0):
